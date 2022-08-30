@@ -13,10 +13,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:3.0.2
-    working_directory: ~/deploy_practice  
+    working_directory: ~/deploy_practice 
     steps:
       - checkout:
-        path: ~/deploy_practice
+          path: ~/deploy_practice
       - ruby/install-deps
 
   test:
