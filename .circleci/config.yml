@@ -46,7 +46,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/ruby:3.0.2
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
       - setup_remote_docker:
