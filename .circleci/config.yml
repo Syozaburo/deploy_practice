@@ -58,7 +58,7 @@ jobs:
           command: heroku container:login
       - run:
           name: push docker image
-          command: docker buildx build . --platform linux/amd64 -t $USERNAME/$HEROKU_APP_NAME:latest
+          command: docker buildx build --platform linux/amd64 -t $HEROKU_APP_NAME .
       - run:
           name: push docker image
           command: docker tag $USERNAME/$HEROKU_APP_NAME registry.heroku.com/$HEROKU_APP_NAME/web
