@@ -61,6 +61,9 @@ jobs:
           command: docker buildx build --platform linux/amd64 -t $HEROKU_APP_NAME .
       - run:
           name: push docker image
+          command: docker tag $USERNAME registry.heroku.com/$HEROKU_APP_NAME/web    
+      - run:
+          name: push docker image
           command: docker push registry.heroku.com/$HEROKU_APP_NAME/web     
       - run: 
           name: release docker image
